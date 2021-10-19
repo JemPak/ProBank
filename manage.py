@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-                                                    # modify path for correct settings, Production or Local 
+                                            # modify path for correct settings, Production or Local 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'authProject.settings-prod')
     try:
         from django.core.management import execute_from_command_line
