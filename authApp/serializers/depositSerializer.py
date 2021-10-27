@@ -17,7 +17,7 @@ class DepositSerializer(serializers.ModelSerializer):
             'amount'         : deposite.amount,
             'register_date'  : deposite.register_date,
             'note'           : deposite.note,
-            'depositer_name' : deposite.note,
+            'depositer_name' : deposite.depositer_name,
             'account' : {
                 'id'       : account.id,
                 'isActive' : account.isActive

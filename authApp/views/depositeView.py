@@ -61,7 +61,7 @@ class DepositCreateView(generics.CreateAPIView):
         serializer = DepositSerializer(data=request.data['deposit_data'])
         serializer.is_valid(raise_exception=True)
         serializer.save()
-
+        # poner un if para que no se pueda llegar un saldo negativo
         account = Account.objects.get(id=request.data['deposit_data']['account'])
         account.balance += request.data['deposit_data']['amount']
         account.save()
